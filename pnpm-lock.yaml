@@ -7,6 +7,7 @@ importers:
       '@commitlint/cli': ^17.6.7
       '@commitlint/config-conventional': ^17.6.7
       '@rollup/plugin-commonjs': ^25.0.3
+      '@rollup/plugin-replace': ^5.0.2
       '@typescript-eslint/eslint-plugin': 5.40.0
       '@typescript-eslint/parser': 5.40.0
       commitlint: ^17.6.5
@@ -21,6 +22,8 @@ importers:
       rollup-plugin-generate-package-json: ^3.2.0
       rollup-plugin-typescript2: ^0.35.0
       typescript: 4.8.4
+    dependencies:
+      '@rollup/plugin-replace': 5.0.2_rollup@3.26.3
     devDependencies:
       '@commitlint/cli': 17.6.7
       '@commitlint/config-conventional': 17.6.7
@@ -319,7 +322,6 @@ packages:
 
   /@jridgewell/sourcemap-codec/1.4.15:
     resolution: {integrity: sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==, tarball: '@jridgewell/sourcemap-codec/download/@jridgewell/sourcemap-codec-1.4.15.tgz'}
-    dev: true
 
   /@jridgewell/trace-mapping/0.3.9:
     resolution: {integrity: sha512-3Belt6tdc8bPgAtbcmdtNJlirVoTmEb5e2gC94PnkwEW9jI6CAHUeoG85tjWP5WquqfavoMtMwiG4P926ZKKuQ==, tarball: '@jridgewell/trace-mapping/download/@jridgewell/trace-mapping-0.3.9.tgz'}
@@ -386,6 +388,20 @@ packages:
       rollup: 3.26.3
     dev: true
 
+  /@rollup/plugin-replace/5.0.2_rollup@3.26.3:
+    resolution: {integrity: sha512-M9YXNekv/C/iHHK+cvORzfRYfPbq0RDD8r0G+bMiTXjNGKulPnCT9O3Ss46WfhI6ZOCgApOP7xAdmCQJ+U2LAA==, tarball: '@rollup/plugin-replace/download/@rollup/plugin-replace-5.0.2.tgz'}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 5.0.2_rollup@3.26.3
+      magic-string: 0.27.0
+      rollup: 3.26.3
+    dev: false
+
   /@rollup/pluginutils/4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==, tarball: '@rollup/pluginutils/download/@rollup/pluginutils-4.2.1.tgz'}
     engines: {node: '>= 8.0.0'}
@@ -407,7 +423,6 @@ packages:
       estree-walker: 2.0.2
       picomatch: 2.3.1
       rollup: 3.26.3
-    dev: true
 
   /@tsconfig/node10/1.0.9:
     resolution: {integrity: sha512-jNsYVVxU8v5g43Erja32laIDHXeoNvFEpX33OK4d6hljo3jDhCBDhx5dhCCTMWUojscpAagGiRkBKxpdl9fxqA==, tarball: '@tsconfig/node10/download/@tsconfig/node10-1.0.9.tgz'}
@@ -427,7 +442,6 @@ packages:
 
   /@types/estree/1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==, tarball: '@types/estree/download/@types/estree-1.0.1.tgz'}
-    dev: true
 
   /@types/json-schema/7.0.12:
     resolution: {integrity: sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==, tarball: '@types/json-schema/download/@types/json-schema-7.0.12.tgz'}
@@ -1202,7 +1216,6 @@ packages:
 
   /estree-walker/2.0.2:
     resolution: {integrity: sha1-UvAQF4wqTBF6d1fP6UKtt9LaTKw=, tarball: estree-walker/download/estree-walker-2.0.2.tgz}
-    dev: true
 
   /esutils/2.0.3:
     resolution: {integrity: sha1-dNLrTeC42hKTcRkQ1Qd1ubcQ72Q=, tarball: esutils/download/esutils-2.0.3.tgz}
@@ -1358,7 +1371,6 @@ packages:
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
-    dev: true
     optional: true
 
   /function-bind/1.1.1:
@@ -1860,7 +1872,6 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
-    dev: true
 
   /make-dir/2.1.0:
     resolution: {integrity: sha1-XwMQ4YuL6JjMBwCSlaMK5B6R5vU=, tarball: make-dir/download/make-dir-2.1.0.tgz}
@@ -2171,7 +2182,6 @@ packages:
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==, tarball: picomatch/download/picomatch-2.3.1.tgz}
     engines: {node: '>=8.6'}
-    dev: true
 
   /pidtree/0.6.0:
     resolution: {integrity: sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==, tarball: pidtree/download/pidtree-0.6.0.tgz}
@@ -2369,7 +2379,6 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
-    dev: true
 
   /run-applescript/5.0.0:
     resolution: {integrity: sha1-4R4cky4FXVxrQNmDdOAmjZsRiZw=, tarball: run-applescript/download/run-applescript-5.0.0.tgz}
