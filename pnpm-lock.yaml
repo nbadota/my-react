@@ -6,6 +6,7 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.6.7
       '@commitlint/config-conventional': ^17.6.7
+      '@rollup/plugin-alias': ^5.0.0
       '@rollup/plugin-commonjs': ^25.0.3
       '@rollup/plugin-replace': ^5.0.2
       '@typescript-eslint/eslint-plugin': 5.40.0
@@ -27,6 +28,7 @@ importers:
     devDependencies:
       '@commitlint/cli': 17.6.7
       '@commitlint/config-conventional': 17.6.7
+      '@rollup/plugin-alias': 5.0.0_rollup@3.26.3
       '@rollup/plugin-commonjs': 25.0.3_rollup@3.26.3
       '@typescript-eslint/eslint-plugin': 5.40.0_5p65mzfro5h2t35v3uexgkspce
       '@typescript-eslint/parser': 5.40.0_zz37v4vh4i4jkvces7hvtkgg6q
@@ -368,6 +370,19 @@ packages:
       open: 9.1.0
       picocolors: 1.0.0
       tslib: 2.6.1
+    dev: true
+
+  /@rollup/plugin-alias/5.0.0_rollup@3.26.3:
+    resolution: {integrity: sha512-l9hY5chSCjuFRPsnRm16twWBiSApl2uYFLsepQYwtBuAxNMQ/1dJqADld40P0Jkqm65GRTLy/AC6hnpVebtLsA==, tarball: '@rollup/plugin-alias/download/@rollup/plugin-alias-5.0.0.tgz'}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      rollup: 3.26.3
+      slash: 4.0.0
     dev: true
 
   /@rollup/plugin-commonjs/25.0.3_rollup@3.26.3:
@@ -2453,6 +2468,11 @@ packages:
   /slash/3.0.0:
     resolution: {integrity: sha1-ZTm+hwwWWtvVJAIg2+Nh8bxNRjQ=, tarball: slash/download/slash-3.0.0.tgz}
     engines: {node: '>=8'}
+    dev: true
+
+  /slash/4.0.0:
+    resolution: {integrity: sha1-JCI3IXbExsWt214q2oha+YSzlqc=, tarball: slash/download/slash-4.0.0.tgz}
+    engines: {node: '>=12'}
     dev: true
 
   /slice-ansi/3.0.0:
